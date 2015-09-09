@@ -1,0 +1,62 @@
+@import compass
+@import compass/reset
+@import compass/css3
+
+$colorA: #4c0
+  
+%borderStyle
+  border: 2px rgba(255, 255, 255, .75) solid
+  border-radius: 50%
+ 
+a
+  text-decoration: none
+  
+.menuArea
+  width: 100%
+  box-sizing: border-box
+  padding: 6px
+  background: #666
+  
+.navDesign
+  box-sizing: border-box
+  overflow: hidden
+  
+  li
+    display: block
+    vertical-align: bottom
+    padding: 12px 0
+    width: 33%
+    height: 88px
+    float: left
+    vertical-align: bottom
+    background: darken($colorA, 10%)
+    
+    &:nth-child(3n)
+      width: 34%
+    
+    a
+      display: block
+      width: 88px
+      height: 88px
+      color: #fff
+      box-sizing: border-box
+      text-align: center
+      margin: 0 auto
+      font-size: 14px
+      @extend %borderStyle
+      @include box-shadow(rgba(34, 71, 31, 0.439216) 3px 2px 9px -3px)
+      
+      span
+        display: inline-block
+        vertical-align: middle
+        padding-top: 42%
+        
+        &:after
+          content: "\f087"
+          font-family: FontAwesome
+          margin-left: 3px
+      
+      &:hover
+        background: darken($colorA, 20%)
+        border: none
+        @include box-shadow(rgba(34, 71, 31, 0.439216) 3px 2px 9px -3px inset)
